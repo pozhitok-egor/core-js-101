@@ -85,10 +85,11 @@ function timeSpanToString(startDate, endDate) {
   hours = (hours < 10) ? `0${hours}` : `${hours}`;
   minutes = (minutes < 10) ? `0${minutes}` : `${minutes}`;
   seconds = (seconds < 10) ? `0${seconds}` : `${seconds}`;
-  if (ms < 10)
+  if (ms < 10) {
     ms = `00${ms}`;
-  else if (ms < 100)
+  } else if (ms < 100) {
     ms = `0${ms}`;
+  }
   return `${hours}:${minutes}:${seconds}.${ms}`;
 }
 
